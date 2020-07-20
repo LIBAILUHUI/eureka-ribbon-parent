@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: config-bus-client-app
+  cloud:
+    config:
+      name: config
+      profile: test
+      #可以指定拉去配置的Git分支
+      label: master
+      discovery:
+        enabled: true
+        # 配置中心的服务
+        service-id: sc-config-bus-server
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+
+  kafka:
+    bootstrap-servers: 192.168.218.128:9092
+    consumer:
+      topic: test_topic
+      group-id: streamProcesser
+      auto-offset-reset: earliest
+      #指定反序列化方式
+      key-deserializer: StringDeserializer
+      #value必须用ByteArrayDeserializer方式
+      value-deserializer: ByteArrayDeserializer
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/

@@ -51,4 +51,11 @@ public class UserController {
         page.setTotal(userIPage.getTotal());
         return page;
     }
+
+
+    @RequestMapping("a")
+    public String getA(){
+        return "success a";
+    }
+
 }

@@ -1,0 +1,16 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server-app
+  cloud:
+    config:
+      server:
+        git:
+          #配置github
+          uri: https://github.com/LIBAILUHUI/sc-cloud-study-config.git
+          #配置搜索目录
+          search-paths:
+            - project/configpath
+      #配置分支
+      label: master

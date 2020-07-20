@@ -14,6 +14,13 @@
         <module>user-consumer</module>
         <module>user-provider1</module>
         <module>user-interface</module>
+        <module>consumer-hytrix</module>
+        <module>hystrix-dashboard</module>
+        <module>zuul-application</module>
+        <module>config-server-app</module>
+        <module>config-client-app</module>
+        <module>config-bus-server-app</module>
+        <module>config-bus-client-app</module>
     </modules>
 
 

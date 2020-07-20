@@ -1,0 +1,7 @@
+#bootstrap.yml比application.yml先加载
+spring:
+  application:
+    name: sc-config-bus-client
+
+server:
+  port: 8114

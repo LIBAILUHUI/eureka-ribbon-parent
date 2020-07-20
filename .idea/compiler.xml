@@ -2,26 +2,41 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="user-provider" />
+        <module name="consumer-hytrix" />
+        <module name="zuul-application" />
         <module name="eureka-server" />
-        <module name="userinterface" />
-        <module name="user-consumer" />
+        <module name="config-bus-client-app" />
         <module name="userprovider1" />
+        <module name="user-provider" />
+        <module name="config-client-app" />
+        <module name="config-server-app" />
+        <module name="config-bus-server-app" />
+        <module name="userinterface" />
+        <module name="hystrixdashboard" />
+        <module name="user-consumer" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="config-bus-client-app" options="-parameters" />
+      <module name="config-bus-server-app" options="-parameters" />
+      <module name="config-client-app" options="-parameters" />
+      <module name="config-server-app" options="-parameters" />
+      <module name="consumer-hytrix" options="-parameters" />
       <module name="eureka-ribbon-parent" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="hystrixdashboard" options="-parameters" />
       <module name="user-consumer" options="-parameters" />
       <module name="user-provider" options="-parameters" />
       <module name="userinterface" options="-parameters" />
       <module name="userprovider1" options="-parameters" />
+      <module name="zuul-application" options="-parameters" />
     </option>
   </component>
 </project>
